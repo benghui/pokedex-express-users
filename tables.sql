@@ -1,0 +1,25 @@
+DROP TABLE IF EXISTS pokemon;
+
+CREATE TABLE pokemon (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR (50) NOT NULL,
+  img VARCHAR (200) NOT NULL,
+  weight VARCHAR (50) NOT NULL,
+  height VARCHAR (50) NOT NULL
+);
+
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR (50) NOT NULL
+);
+
+DROP TABLE IF EXISTS users_pokemon;
+
+CREATE TABLE users_pokemon (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER,
+  pokemon_id INTEGER
+
+);
